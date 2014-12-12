@@ -120,5 +120,22 @@ public class Usuario
             System.out.println("Gramos de grasas ingeridos: 0.0");
             System.out.println("Calorias ingeridas: 0.0");
         }
-    }       
+    }  
+    
+    /**
+     * Compara la ingesta de alimentos entre dos usuarios.
+     */
+    public void comparar(Usuario nuevoUsuario)
+    {        
+        if (calculaCalorias() > nuevoUsuario.calculaCalorias())
+        {
+            System.out.println(usuario + " ha consumido más calorias que " + nuevoUsuario);
+        }
+        
+        else
+        {
+            System.out.println(nuevoUsuario + " ha consumido más calorias que " + usuario);
+        }
+    }
+   
 }
