@@ -10,15 +10,18 @@ public class Usuario
     private float gramos;  
     // Alimento que va a comer el usuario.
     private Alimento alimento;
-
+    // Cantidad del alimento más calorico.
+    private float muyCalorico;
+   
     /**
-     * Construcotr al que introducimos un nombre de usuario y 
+     * Constructor al que introducimos un nombre de usuario y 
      */
     public Usuario(String usuario)    
     {
         this.usuario = usuario;
         gramos = 0;
         alimento = null;
+        muyCalorico = 0;
     }
     
     /**
@@ -27,9 +30,10 @@ public class Usuario
     public void comer(Alimento alimento, float gramos)
     {
         this.alimento = alimento;
-        this.gramos = gramos;
+        this.gramos = gramos; 
+        masCalorico();        
     }
-    
+   
     /**
      * Calcula las proteinas que tiene el alimento en base a los gramos del mismo.
      */
@@ -138,4 +142,19 @@ public class Usuario
         }
     }
    
-}
+    /**
+     * Muestra el alimento con mayor indice calórico comido por el usuario
+     */
+    public float masCalorico()// debería ser String ya que es un nombre pero sigo con el error de antes.
+    {
+        float calorias = calculaCalorias();
+        if (calorias > muyCalorico)
+        {
+            muyCalorico = calorias;
+            //alimentoCalorico = alimento;
+        }
+        return muyCalorico; // Debería devolver el nombre del alimento y no las calorias pero llevo arrastrando un error desde el principio.
+        //return alimentoCalorico;
+    }
+    
+}    

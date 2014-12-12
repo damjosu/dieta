@@ -1,13 +1,16 @@
 #BlueJ class context
 comment0.params=usuario
 comment0.target=Usuario(java.lang.String)
-comment0.text=\r\n\ Construcotr\ al\ que\ introducimos\ un\ nombre\ de\ usuario\ y\ \r\n
+comment0.text=\r\n\ Constructor\ al\ que\ introducimos\ un\ nombre\ de\ usuario\ y\ \r\n
 comment1.params=alimento\ gramos
 comment1.target=void\ comer(Alimento,\ float)
 comment1.text=\r\n\ Da\ de\ comer\ al\ usuario\ un\ alimento\ concreto\ con\ una\ cantidad\ concreta.\r\n
 comment10.params=nuevoUsuario
 comment10.target=void\ comparar(Usuario)
 comment10.text=\r\n\ Compara\ la\ ingesta\ de\ alimentos\ entre\ dos\ usuarios.\r\n
+comment11.params=
+comment11.target=float\ masCalorico()
+comment11.text=\r\n\ Muestra\ el\ alimento\ con\ mayor\ indice\ cal\u00F3rico\ comido\ por\ el\ usuario\r\n
 comment2.params=
 comment2.target=float\ calculaProteinas()
 comment2.text=\r\n\ Calcula\ las\ proteinas\ que\ tiene\ el\ alimento\ en\ base\ a\ los\ gramos\ del\ mismo.\r\n
@@ -32,4 +35,4 @@ comment8.text=\r\n\ Calcula\ las\ calorias\ del\ alimento.\r\n
 comment9.params=
 comment9.target=void\ mostrarUsuario()
 comment9.text=\r\n\ Muestra\ los\ datos\ alimenticios\ del\ usuario.\r\n
-numComments=11
+numComments=12
