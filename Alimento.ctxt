@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=nombre\ proteinas\ carbohidratos\ grasas
+comment0.target=Alimento(java.lang.String,\ float,\ float,\ float)
+comment0.text=\r\n\ Crea\ un\ alimento\ con\ su\ nombre\ y\ los\ gramos\ de\ proteinas,\ \r\n\ carbohidratos\ y\ grasas\ por\ cada\ 100\ gramos\ de\ alimento\r\n
+comment1.params=
+comment1.target=void\ muestraDatos()
+comment1.text=\r\n\ Imprime\ los\ datos\ del\ alimento\r\n
+numComments=2
