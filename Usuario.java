@@ -17,6 +17,8 @@ public class Usuario
     public Usuario(String usuario)    
     {
         this.usuario = usuario;
+        gramos = 0;
+        alimento = null;
     }
     
     /**
@@ -39,6 +41,16 @@ public class Usuario
     }
     
     /**
+     * 
+     */
+    private float porcentajeProteinas()
+    {
+        float proteinas;
+        proteinas = ((calculaProteinas() / (calculaProteinas() + calculaCarbohidratos() + calculaGrasas())) * 100);
+        return proteinas;
+    }
+    
+    /**
      * Calcula los carbohidratos que tiene el alimento en base a los gramos del mismo.
      */
     private float calculaCarbohidratos()
@@ -49,12 +61,32 @@ public class Usuario
     }
     
     /**
+     * Calcula el porcentaje de carbohidratos en el alimento.
+     */
+    private float porcentajeCarbohidratos()
+    {
+        float carbohidratos = alimento.saberCarbohidratos();
+        carbohidratos = ((calculaCarbohidratos() / (calculaProteinas() + calculaCarbohidratos() + calculaGrasas())) * 100);
+        return carbohidratos;
+    }
+       
+    /**
      * Calcula las grasas que tiene el alimento en base a los gramos del mismo.
      */
     private float calculaGrasas()
     {
         float grasas = alimento.saberGrasas();
         grasas = ((grasas * gramos) / 100);
+        return grasas;
+    }
+    
+    /**
+     * Calcula el porcentaje de grasas en el alimento.
+     */
+    private float porcentajeGrasas()
+    {
+        float grasas = alimento.saberGrasas();
+        grasas = ((calculaGrasas() / (calculaProteinas() + calculaCarbohidratos() + calculaGrasas())) * 100);
         return grasas;
     }
     
@@ -70,12 +102,25 @@ public class Usuario
     /**
      * Muestra los datos alimenticios del usuario.
      */
-    public void mostrarUsuario()
+    public void mostrarUsuario()    
     {
-        System.out.println("Nombre: " + usuario);
-        System.out.println("Gramos de proteinas ingeridos: " + calculaProteinas());
-        System.out.println("Gramos de carbohidratos ingeridos: " + calculaCarbohidratos());
-        System.out.println("Gramos de grasas ingeridos: " + calculaGrasas());
-        System.out.println("Calorias ingeridas: " + calculaCalorias());
+        if (calculaCalorias() != 0)
+        {
+            System.out.println("Nombre: " + usuario);
+            System.out.println("Gramos de proteinas ingeridos: " + calculaProteinas() + porcentajeProteinas());
+            System.out.println("Gramos de carbohidratos ingeridos: " + calculaCarbohidratos() + porcentajeCarbohidratos());
+            System.out.println("Gramos de grasas ingeridos: " + calculaGrasas() + porcentajeGrasas());
+            System.out.println("Calorias ingeridas: " + calculaCalorias());
+        }
+        else
+        {
+            System.out.println("Nombre: " + usuario);
+            System.out.println("Gramos de proteinas ingeridos: 0.0");
+            System.out.println("Gramos de carbohidratos ingeridos: 0.0");
+            System.out.println("Gramos de grasas ingeridos: 0.0");
+            System.out.println("Calorias ingeridas: 0.0");
+        }
     }
+    
+   
 }
