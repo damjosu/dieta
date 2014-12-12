@@ -13,6 +13,7 @@ public class Alimento
     private float carbohidratos;
     // Cantidad en gramos de grasas por cada 100 gramos del alimento.
     private float grasas;
+    // Nombre del usuario que maneja la aplicación.    
 
     /**
      * Crea un alimento con su nombre y los gramos de proteinas, 
@@ -24,6 +25,30 @@ public class Alimento
        this.proteinas = proteinas;
        this.carbohidratos = carbohidratos;
        this.grasas = grasas;
+    }
+    
+    /**
+     * Devuelve las proteinas del alimento.
+     */
+    public float saberProteinas()
+    {
+        return proteinas;
+    }
+    
+    /**
+     * Devuelve las carbohidratos del alimento.
+     */
+    public float saberCarbohidratos()
+    {
+        return carbohidratos;
+    }
+    
+    /**
+     * Devuelve las grasas del alimento.
+     */
+    public float saberGrasas()
+    {
+        return grasas;
     }
     
     /**
@@ -66,7 +91,5 @@ public class Alimento
         System.out.println("Grasas por cada 100 gramos: " + grasas);
         System.out.println("Calorias: " + calorias);
         System.out.println("Componente/s mayoritario/s: " + mayoritario);
-    }
-    
-    
+    }    
 }
