@@ -41,7 +41,7 @@ public class Usuario
     }
     
     /**
-     * 
+     * Calcula el porcentaje de las proteinas.
      */
     private float porcentajeProteinas()
     {
@@ -107,9 +107,9 @@ public class Usuario
         if (calculaCalorias() != 0)
         {
             System.out.println("Nombre: " + usuario);
-            System.out.println("Gramos de proteinas ingeridos: " + calculaProteinas() + porcentajeProteinas());
-            System.out.println("Gramos de carbohidratos ingeridos: " + calculaCarbohidratos() + porcentajeCarbohidratos());
-            System.out.println("Gramos de grasas ingeridos: " + calculaGrasas() + porcentajeGrasas());
+            System.out.println("Gramos de proteinas ingeridos: " + calculaProteinas() + " (" + porcentajeProteinas() + "%)");
+            System.out.println("Gramos de carbohidratos ingeridos: " + calculaCarbohidratos() + " (" + porcentajeCarbohidratos() + "%)");
+            System.out.println("Gramos de grasas ingeridos: " + calculaGrasas() + " (" + porcentajeGrasas() + "%)");
             System.out.println("Calorias ingeridas: " + calculaCalorias());
         }
         else
@@ -120,7 +120,5 @@ public class Usuario
             System.out.println("Gramos de grasas ingeridos: 0.0");
             System.out.println("Calorias ingeridas: 0.0");
         }
-    }
-    
-   
+    }       
 }
